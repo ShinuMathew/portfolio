@@ -13,7 +13,7 @@ body {
 }
 
 a {
-    color: var(--base-color);
+    color: var(--primary-color);
 }
 
 a:hover {
@@ -279,11 +279,6 @@ h6 {
         margin-bottom: 30px;
     }
 
-    #hero .hero-container {
-        position: relative;
-        z-index: 2;
-        min-width: 100px;
-    }
 }
 
 /* Section general */
