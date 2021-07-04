@@ -1,7 +1,7 @@
 body {
-    margin: 0;
+    /* margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; */
     font-family: "Open Sans", sans-serif;
     color: #272829;
 
@@ -9,10 +9,11 @@ body {
     /* --base-color : #149ddd; */
     --base-color: wheat;
     --primary-color: #149ddd;
+    /* overflow-x: hidden; */
 }
 
 a {
-    /* color: var(--base-color); */
+    color: var(--base-color);
 }
 
 a:hover {
@@ -184,7 +185,7 @@ h6 {
     position: fixed;
     right: 15px;
     top: 15px;
-    /* z-index: 9998; */
+    z-index: 9998;
     border: 0;
     background: none;
     font-size: 24px;
@@ -197,7 +198,6 @@ h6 {
 
 .mobile-nav-toggle i {
     color: black;
-
 }
 
 .mobile-nav-active {
@@ -240,7 +240,7 @@ h6 {
 
 #hero h1 {
     margin: 0 0 10px 0;
-    font-size: 70px;
+    font-size: 64px;
     font-weight: 700;
     list-style: 56px;
     color: #fff;
@@ -249,7 +249,7 @@ h6 {
 #hero p {
     color: #fff;
     margin-bottom: 50px;
-    font-size: 32px;
+    font-size: 26px;
     font-family: "Poppins", sans-serif;
 }
 
@@ -282,10 +282,45 @@ h6 {
     #hero .hero-container {
         position: relative;
         z-index: 2;
-        min-width: 250px;
+        min-width: 100px;
     }
 }
 
+/* Section general */
+
+section {
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+/* .section-bg {
+    background: #f5f8fd;
+  }
+  
+  .section-title {
+    padding-bottom: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #173b6c;
+  }
+  
+  .section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #149ddd;
+    bottom: 0;
+    left: 0;
+  }
+   */
 /* About */
 
 .about .container-fluid {
@@ -293,7 +328,7 @@ h6 {
 }
 
 .about .content {
-    padding:30px
+    padding: 30px
 }
 
 .about .content h3 {
@@ -331,4 +366,20 @@ h6 {
     margin-left: 50px;
     width: 400px;
     height: auto;
+}
+
+@media (max-width : 768px) {
+    .about-image img {
+        margin-left: 50px;
+        width: 300px;
+        height: auto;
+    }
+
+    .about-image {
+        padding: 0 !important
+    }
+
+    .about .content {
+        padding: 20px !important
+    }
 }
