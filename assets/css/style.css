@@ -30,6 +30,10 @@ h6 {
     font-family: "Raleway", sans-serif;
 }
 
+p {
+    /* letter-spacing: 1px; */
+}
+
 /* HEADER */
 
 #header {
@@ -216,7 +220,7 @@ h6 {
 #hero {
     width: 100%;
     height: 100vh;
-    background: url("../images/profile-img.jpg");
+    background: url("../images/hero-image.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -239,12 +243,29 @@ h6 {
 }
 
 #hero h1 {
+    /* -webkit-text-stroke: 0.3vh #383d38; */
     margin: 0 0 10px 0;
     font-size: 64px;
-    font-weight: 700;
+    font-weight: 600;
     list-style: 56px;
     color: #fff;
+    /* animation: text-animate 6s linear infinite; */
 }
+
+/* @keyframes text-animate {
+    0% {
+        -webkit-text-stroke: 0.3vh #383d38;
+        color : rgba(255, 255, 255, 0.15);
+    }
+    70% {
+        -webkit-text-stroke: 0vh #fff;
+        color : #fff
+    }
+    100% {
+        -webkit-text-stroke: 0.3vh #383d38;
+        color : rgba(255, 255, 255, 0.15);
+    }
+} */
 
 #hero p {
     color: #fff;
@@ -284,28 +305,29 @@ h6 {
 /* Section general */
 
 section {
-    padding: 20px 0;
+    padding-top: 30px;
     overflow: hidden;
 }
 
-/* .section-bg {
+.section-bg {
     background: #f5f8fd;
-  }
-  
-  .section-title {
-    padding-bottom: 30px;
-  }
-  
-  .section-title h2 {
+}
+
+.section-title {
+    padding-bottom: 10px;
+}
+
+.section-title h2 {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
     padding-bottom: 20px;
     position: relative;
     color: #173b6c;
-  }
-  
-  .section-title h2::after {
+    cursor: pointer;
+}
+
+.section-title h2::after {
     content: '';
     position: absolute;
     display: block;
@@ -314,16 +336,38 @@ section {
     background: #149ddd;
     bottom: 0;
     left: 0;
-  }
-   */
+}
+
+.section-title h2:hover::after {
+    animation: underline 1s ease-out infinite;
+}
+
+@keyframes underline {
+    0% {
+        left: 0;
+        background: #149ddd;
+        width: 0px;
+    }
+
+    50% {
+        width: 80px;
+        left: 0;
+    }
+
+    100% {
+        left: 8%;
+        width: 0px;
+    }
+}
+
 /* About */
 
 .about .container-fluid {
-    padding: 30px;
+    padding: 15px;
 }
 
 .about .content {
-    padding: 30px
+    padding: 15px
 }
 
 .about .content h3 {
@@ -358,14 +402,14 @@ section {
 }
 
 .about-image img {
-    margin-left: 50px;
+    /* margin-left: 50px; */
     width: 400px;
     height: auto;
 }
 
 @media (max-width : 768px) {
     .about-image img {
-        margin-left: 50px;
+        margin-left: 30px;
         width: 300px;
         height: auto;
     }
@@ -377,4 +421,57 @@ section {
     .about .content {
         padding: 20px !important
     }
+}
+
+/* FACTS */
+
+#facts {
+    min-height: 30vh;
+    /* padding-bottom: 10px; */
+
+}
+
+.facts .count-box {    
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px 
+}
+
+.facts .count-box i {
+    display: block;
+    font-size: 44px;
+    color: var(--primary-color);
+    float: left;
+}
+
+.facts .count-box span {
+    font-size: 40px;
+    line-height: 40px;
+    display: block;
+    font-weight: 700;
+    color: #050d18;
+    padding: 20px;
+}
+
+.facts .count-box h4 {
+    color: var(--primary-color)
+}
+
+.facts .count-box h4,
+.facts .count-box p {
+    font-family: "Raleway", sans-serif;
+}
+
+.facts .count-box p {
+    margin: 0 !important;
+    color: #122f57
+}
+
+.facts .count-box .percent::after {
+    content: "%"
+}
+
+.facts .count-box .cgpa::after {
+    content: " CGPA";
+    font-size: 35px
 }
