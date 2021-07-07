@@ -4,7 +4,7 @@ body {
     box-sizing: border-box; */
     font-family: "Open Sans", sans-serif;
     color: #272829;
-
+    scroll-behavior: smooth;
     /* common Variable */
     /* --base-color : #149ddd; */
     --base-color: wheat;
@@ -223,6 +223,7 @@ p {
     background: url("../images/hero-image.jpg");
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 #hero::before {
@@ -250,6 +251,34 @@ p {
     list-style: 56px;
     color: #fff;
     /* animation: text-animate 6s linear infinite; */
+}
+
+#hero .hero-suggestions {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 3;
+}
+
+.hero-suggestions a {
+    padding:20px;
+    font-size: 2em;
+    color: #fff;    
+}
+
+.hero-suggestions a:hover {
+    color: var(--base-color)
+}
+
+
+@media (max-width : 768px) {
+    #hero .hero-suggestions {
+        flex-direction: column;
+    }
 }
 
 /* @keyframes text-animate {
@@ -325,6 +354,7 @@ section {
     position: relative;
     color: #173b6c;
     cursor: pointer;
+    letter-spacing: 1px;
 }
 
 .section-title h2::after {
@@ -360,6 +390,9 @@ section {
     }
 }
 
+.section-subtitle {
+    padding-bottom: 10px;
+}
 /* About */
 
 .about .container-fluid {
@@ -475,3 +508,36 @@ section {
     content: " CGPA";
     font-size: 35px
 }
+
+/* Skills */
+.skills .progress {
+    height: 50px;
+    display: block;
+    background: none;
+  }
+  
+  .skills .progress .skill {
+    padding: 10px 0;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #050d18;
+  }
+  
+  .skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+  }
+  
+  .skills .progress-bar-wrap {
+    background: #dce8f8;
+  }
+  
+  .skills .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: .9s;
+    background-color: #149ddd;
+  }
