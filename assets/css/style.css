@@ -707,7 +707,12 @@ section {
     }
 }
 
+/* EXPERIENCE */
 
+.carousel-item img {
+    max-height: 600px;
+    width:auto;
+}
 
 /* FOOTER */
 footer {
